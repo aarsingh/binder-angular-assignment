@@ -22,7 +22,6 @@ export class HeaderComponent {
   showCartWidget: boolean = false;
 
   ngOnInit(){
-    // this.cartItems = this.cartService.getCart().length;
     this.cartService.cartItems$.subscribe((items) => {
       this.cartItemCount = items.length;
     });
@@ -63,7 +62,4 @@ export class HeaderComponent {
     return false;
   }
 
-  // getCartItems() {
-  //   this.cartItems = this.cartService.getCart().length;
-  // }
 }

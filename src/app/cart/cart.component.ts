@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Services/cart.service';
 import { Course } from 'src/app/Models/course';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { WishlistService } from '../Services/wishlist.service';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -20,14 +19,9 @@ export class CartComponent implements OnInit {
 
   courseModals: boolean = false;
 
-  // private cart = new BehaviorSubject<Course[]>([]);
-  // cartItems$ = this.cart.asObservable();
-
   constructor(private cartService: CartService, private wishlistService: WishlistService, private router: Router) { }
 
   ngOnInit() {
-    // this.cart = this.cartService.getCart();
-
     this.cart = this.cartService.getCart();
     console.log(this.cart);
     this.totalQuantity = this.cartService.getTotalQuantity();
@@ -35,7 +29,6 @@ export class CartComponent implements OnInit {
   }
 
   calculateTotal(): void {
-    // this.total = this.cart.reduce((acc, item) => acc + item.actualPrice * item.quantity, 0);
     this.totalQuantity = this.cart.reduce((acc, item) => acc + item.actualPrice * 1, 0);
   }
 
@@ -58,13 +51,6 @@ export class CartComponent implements OnInit {
       return total + discountedPrice * course.quantity;
    }, 0);
   }
-
-  // getGrandTotal1() {
-  //   return this.cart.reduce((total, course) => {
-  //     const discountedPrice = course.actualPrice - ((course.discountPercentage / 100) * course.actualPrice);
-  //     return discountedPrice * course.quantity;
-  //  }, 0);
-  // }
 
   getGrandTotal1() {
     return this.cart.reduce((total, course) => {
@@ -89,9 +75,6 @@ export class CartComponent implements OnInit {
   }
 
   YouSaved(){
-    console.log(this.getPrice());
-    console.log(this.getGrandTotal1());
-    console.log(this.getPrice() - this.getGrandTotal1());
     return this.getPrice() - this.getGrandTotal1();
   }
 
@@ -129,24 +112,9 @@ export class CartComponent implements OnInit {
     // this.router.navigateByUrl('/Checkout');
   }
 
-  clearCart() {
-    // Clear the cart items array
-    const emptyCart: Course[] = [];
-    // this.cart.next(emptyCart);
-    // this.cart = [];
-  }
-
   confirmAction(shouldAddToCart: boolean) {
-    // Close the modal for the specific course
-    // this.courseModals.set(course.id, false);
-    // this.cart = []; // Clear the entire cart array
-    // this.calculateTotal();
-
-    // alert(shouldAddToCart)
-
     if (!shouldAddToCart) {
       this.cartService.clearCart();
-      // this.cart = []; // Clear the entire cart array
       this.calculateTotal();
       this.cart = this.cartService.getCart();
     }

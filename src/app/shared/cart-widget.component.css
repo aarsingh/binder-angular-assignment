@@ -1,14 +1,7 @@
-/* cart-widget.component.css */
-
 .cart-widget {
     position: fixed;
-    /* top: 0; */
-    /* right: 0; */
-    /* background-color: #f8f8f8; */
-    /* padding: 10px; */
     border: 1px solid #ccc;
     border-radius: 5px;
-    /* background-color: darkcyan; */
     background-color: #fff;
     color: #000;
     top: 20px;
@@ -33,7 +26,6 @@
   }
   
   .cart-item {
-    /* margin-bottom: 5px; */
     padding: 10px;
   }
 
@@ -42,7 +34,6 @@
   }
 
   .close-button {
-    /* Add styling for the close button */
     position: absolute;
     top: 5px;
     right: 5px;
@@ -52,7 +43,6 @@
     color: #fff;
     border: 1px solid #8b3131;
     border-radius: 5px;
-    /* Add other styles as needed */
   }
 
   .card-footer {
@@ -61,17 +51,14 @@
   
 
   .cart-widget {
-  /* Other styles for the cart widget */
-
-  display: none; /* Initially hide the cart widget */
+  display: none;
 }
 
 .cart-widget.visible {
-  display: block; /* Display the cart widget when the 'visible' class is present */
+  display: block; 
 }
 
 .empty-div .btn{
-  /* padding: 5px 25px; */
   padding: 5px 18px;
   border: none;
   border-radius: 2px;
@@ -83,7 +70,6 @@
 }
 
 .card-footer .btn{
-    /* padding: 5px 25px; */
     padding: 5px 18px;
     border: none;
     border-radius: 2px;

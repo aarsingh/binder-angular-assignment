@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 import { profileComponent } from './profile/profile.component';
-import { AboutComponent } from './about/about.component';
 import { PopularComponent } from './home/popular/popular.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
@@ -22,8 +20,6 @@ const routes: Routes = [
     // {path: '', component: HomeComponent},
     { path: '', redirectTo: '/Home', pathMatch: 'full' },
     {path: 'Home', component: HomeComponent, canActivate: [CanActivate]},
-    // {path: 'About', component: AboutComponent},
-    // {path: 'Contact', component: ContactComponent, canDeactivate: [(comp: ContactComponent) => {return comp.canExit();}]},
     {path: 'Profile', component: profileComponent, canActivate: [CanActivate]},
     {path: 'Courses', component: CoursesComponent, resolve: {courses: resolve}},
     {path: 'Courses', canActivateChild: [CanActivateChild], children: [

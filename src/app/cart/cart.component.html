@@ -28,8 +28,6 @@
         </thead>
         <tbody>
       
-          
-      
           <tr *ngFor="let course of cart" class="course-row">
             <td class="product-name-td">{{ course.courseName }}</td>
             <td>{{ course.actualPrice | currency:'INR' }}</td>
@@ -55,8 +53,6 @@
         <h6>Total Cart Value</h6>
         <p class="price-card-p">Total: {{ this.getPrice() | currency:'INR' }}</p>
         <p class="price-card-p">Quantity: {{  this.getTotalQuantity() }}</p>
-        <!-- <p>Total: {{ this.getGrandTotal() | currency:'INR' }}</p> -->
-        <!-- <p>Discount: {{ this.getTotalDiscount() }}%</p> -->
         <p class="price-card-p">You Saved: {{ this.YouSaved() | currency:'INR' }}</p>
         <p class="price-card-p">Final Price: {{ this.getGrandTotal1() | currency:'INR' }}</p>
   

@@ -1,5 +1,4 @@
 <div class="section-header">
-    <!-- <h1>Popular Courses</h1> -->
     <h1>Courses</h1>
 </div>
 
@@ -57,7 +56,6 @@
         </div>
         <div class="course-price-rating">
             <div class="course-price"><b>PRICE:</b> <span class="course-price-span" [ngStyle]="{ 'text-decoration': course.discountPercentage > 0 ? 'line-through' : 'none' }">{{ course.actualPrice | currency:'INR' }}</span></div>
-            <!-- <div class="course-rating"><b>RATINGS:</b> {{ course.rating }}</div> -->
             <div class="course-rating" *ngIf="course.discountPercentage > 0"><b>DISCOUNT:</b> {{ course.discountPercentage }}%</div>
             <div class="course-rating" *ngIf="course.discountPercentage > 0"><b>FINAL PRICE:</b> {{ course.actualPrice - ((course.discountPercentage/100) * course.actualPrice) | currency:'INR' }}</div>
 
@@ -69,7 +67,6 @@
                 <ul class="tags green" *ngFor="let tag of course.tags">
                     <li><span>{{ tag }}</span></li>
                 </ul>
-                <!-- <div class="course-rating"><b>TAGS:</b> <span *ngFor="let tag of course.tags" class="course-tag">{{ tag }}</span></div> -->
             </div>
         </div>
         <div class="course-action-buttons">

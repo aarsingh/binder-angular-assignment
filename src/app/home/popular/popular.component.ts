@@ -35,13 +35,10 @@ export class PopularComponent {
    courseModals: Map<number, boolean> = new Map<number, boolean>();
 
   ngOnInit(){
-    // this.popularCourses = this.courseService.courses.filter(c => c.rating >= 4.5);
-    // this.popularCourses = this.courseService.courses;
     this.loadCourses();
   }
 
   loadCourses(): void {
-    // this.courses = this.courseService.getCourses();
     this.popularCourses = this.courseService.courses;
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
@@ -61,24 +58,17 @@ export class PopularComponent {
   }
 
   navigateToCourses(){
-    //this.router.navigate(['Courses'], {relativeTo: this.activeRoute});
     this.router.navigateByUrl('Courses');
   }
-
 
   addToCart(course: Course, quantity: number) {
     const index = this.cartService.getCart().findIndex(item => item.id === course.id);
     if (index !== -1) {
-      // this.modalMessage = `The course "${course.courseName}" is already in your cart. Do you want to add this course again?`;
       this.modalMessage = `The course "${course.courseName}" is already in your cart!`;
-       // Set showModal for the specific course
        this.courseModals.set(course.id, true);
     } else {
-      // this.modalMessage = `Are you sure you want to add "${course.courseName}" course to your cart?`;
       this.cartService.showSuccessMessage(`Product "${course.courseName}" added to the cart.`);
       this.cartService.addToCart(course, quantity);
-      // Set showModal for the specific course
-      // this.courseModals.set(course.id, true);
     }
   }
 
@@ -108,6 +98,7 @@ export class PopularComponent {
   }
 
   addToWishlist(course: Course): void {
+    this.cartService.showSuccessMessage(`Product "${course.courseName}" added to the wishlist.`);
     this.wishlistService.addToWishlist(course);
   }
 

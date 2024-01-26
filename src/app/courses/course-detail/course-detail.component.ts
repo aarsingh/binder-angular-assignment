@@ -32,21 +32,11 @@ export class CourseDetailComponent implements OnInit, OnDestroy{
   courseModals: Map<number, boolean> = new Map<number, boolean>();
 
   ngOnInit(){
-    // this.courseId = this.activeRoute.snapshot.params['id'];
-    //this.courseId = +this.activeRoute.snapshot.paramMap.get('id');
-    // this.activeRoute.params.subscribe((data) => {
-    //   this.courseId = +data['id'];
-    //   this.selectedCourse = this.courseService.courses.find(course => course.id === this.courseId);
-    // })
 
     this.paramMapObs = this.activeRoute.paramMap.subscribe((data) => {
       this.courseId = +data.get('id');
       this.selectedCourse = this.courseService.courses.find(course => course.id === this.courseId);
     })
-
-  
-    // this.calculateTimeRemaining(this.selectedCourse);
-    // Update the timer every second
 
     if(this.selectedCourse.discountPercentage > 0){
       this.timerInterval = setInterval(() => {
@@ -75,27 +65,19 @@ export class CourseDetailComponent implements OnInit, OnDestroy{
   }
 
   getDiscount() {
-    // return this.selectedCourse.reduce((total, course) => {
       let price = (this.selectedCourse.discountPercentage / 100 ) * this.selectedCourse.actualPrice;
        this.courseDiscountPrice = this.selectedCourse.actualPrice - price;
-       console.log(this.selectedCourse)
-      //  return total + discountedPrice;
-    // }, 0);
   }
 
   addToCart(course: Course, quantity: number) {
     const index = this.cartService.getCart().findIndex(item => item.id === course.id);
     if (index !== -1) {
-      // this.modalMessage = `The course "${course.courseName}" is already in your cart. Do you want to add this course again?`;
       this.modalMessage = `The course "${course.courseName}" is already in your cart!`;
        // Set showModal for the specific course
        this.courseModals.set(course.id, true);
     } else {
-      // this.modalMessage = `Are you sure you want to add "${course.courseName}" course to your cart?`;
       this.cartService.showSuccessMessage(`Product "${course.courseName}" added to the cart.`);
       this.cartService.addToCart(course, quantity);
-      // Set showModal for the specific course
-      // this.courseModals.set(course.id, true);
     }
   }
 

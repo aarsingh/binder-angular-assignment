@@ -11,7 +11,6 @@
     <span>{{ selectedCourse.courseName }}</span>
   </nav>
 
-
   <div *ngIf="(cartService.successMessage$ | async) as successMessage">
     <div class="success-message fade-in">
       {{ successMessage }}
@@ -66,7 +65,6 @@
                   [modalMessage]="modalMessage"
                   (confirmAction)="confirmAction($event, selectedCourse, selectedCourse.quantity)"
                 ></app-confirmation-modal>
-
 
           <button class="btn" (click)="addToWishlist(selectedCourse)">Add to Wishlist</button>
       </div>

@@ -37,7 +37,6 @@ export class profileComponent implements OnInit  {
     if (userData) {
       const parsedUserData = JSON.parse(userData);
       this.userForm.setValue(parsedUserData);
-      // this.profileImageUrl = parsedUserData.profileImageUrl || 'default-profile-image.jpg';
     }
   }
 
@@ -65,20 +64,6 @@ export class profileComponent implements OnInit  {
       reader.readAsDataURL(file);
     }
   }
-
-  /*
-  handleImageUpload(event: any): void {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.profileImageUrl = reader.result as string;
-        localStorage.setItem('profileImageUrl', this.profileImageUrl);
-      };
-      reader.readAsDataURL(file);
-    }
-  }
-  */
 
   ngOnDestroy(): void {
     // Save user image to local storage when component is destroyed

@@ -1,4 +1,3 @@
-// cart-widget.component.ts
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CartService } from '../Services/cart.service';
@@ -31,37 +30,13 @@ export class CartWidgetComponent implements OnInit, OnDestroy {
         this.isCartWidgetVisible = isVisible;
       }
     );
-  }
-  
-
-  /*
-  ngOnInit(): void {
-    this.cartService.cartItems$.subscribe((items) => {
-      this.cartItems = items;
-    });
-
-    this.cartVisibilitySubscription = this.cartService.cartWidgetVisibility$.subscribe(
-      (isVisible) => {
-        if (isVisible) {
-          // Add 'visible' class to show the cart widget
-          document.getElementById('cartWidget').classList.add('visible');
-        } else {
-          // Remove 'visible' class to hide the cart widget
-          document.getElementById('cartWidget').classList.remove('visible');
-        }
-      }
-    );
-  }
-  */
-  
+  } 
 
   ngOnDestroy(): void {
     this.cartVisibilitySubscription.unsubscribe();
   }
 
   getTotalCost(): number {
-    // Calculate total cost based on your logic
-    // For example, summing up actual prices
     return this.cartItems.reduce((total, item) => total + item.actualPrice, 0);
   }
 

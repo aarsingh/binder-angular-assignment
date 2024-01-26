@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit{
 
     ngOnInit(){
         this.activeRoute.fragment.subscribe((data) => {
-            //console.log(data);
             this.JumpToSection(data);
         });
     }

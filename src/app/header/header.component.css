@@ -14,7 +14,6 @@ h2{
 .page-header{
     width: 100%;
     padding: 5px 50px;
-    /* background-color: #28282B; */
     background-color: #000000;
     color:#FBFCFC;
     display: flex;
@@ -27,14 +26,12 @@ h2{
     display: flex;
 }
 .page-header-primary-nav{
-    /* margin-left: 200px; */
     margin-left: 20px;
     font-size: 16px;
     width: 80vh;
     padding: 15px;
 }
 .page-header-secondory-nav{
-  /* margin-left: 200px; */
   margin-left: 0px;
   font-size: 16px;
   width: 10vh;
