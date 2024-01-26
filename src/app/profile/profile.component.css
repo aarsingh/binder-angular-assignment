@@ -106,3 +106,9 @@ button[type="submit"]:hover {
 .popup p {
   margin-bottom: 0;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

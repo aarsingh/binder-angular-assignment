@@ -37,6 +37,7 @@ export class profileComponent implements OnInit  {
     if (userData) {
       const parsedUserData = JSON.parse(userData);
       this.userForm.setValue(parsedUserData);
+      // this.profileImageUrl = parsedUserData.profileImageUrl || 'default-profile-image.jpg';
     }
   }
 
