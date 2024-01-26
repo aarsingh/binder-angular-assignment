@@ -10,7 +10,7 @@ import { Course } from './../Models/course';
 export class WishlistComponent implements OnInit {
   wishlistCourses: Course[] = [];
 
-  constructor(private wishlistService: WishlistService) {}
+  constructor(private wishlistService: WishlistService) { }
 
   ngOnInit(): void {
     this.wishlistCourses = this.wishlistService.wishlistCourses;

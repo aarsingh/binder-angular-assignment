@@ -15,33 +15,35 @@ import { CanActivate, CanActivateChild, resolve } from './auth.guard'
 
 
 //DEFINE ROUTE
-const routes: Routes = [  
-  
-    // {path: '', component: HomeComponent},
-    { path: '', redirectTo: '/Home', pathMatch: 'full' },
-    {path: 'Home', component: HomeComponent, canActivate: [CanActivate]},
-    {path: 'Profile', component: profileComponent, canActivate: [CanActivate]},
-    {path: 'Courses', component: CoursesComponent, resolve: {courses: resolve}},
-    {path: 'Courses', canActivateChild: [CanActivateChild], children: [
+const routes: Routes = [
+
+  // {path: '', component: HomeComponent},
+  { path: '', redirectTo: '/Home', pathMatch: 'full' },
+  { path: 'Home', component: HomeComponent, canActivate: [CanActivate] },
+  { path: 'Profile', component: profileComponent, canActivate: [CanActivate] },
+  { path: 'Courses', component: CoursesComponent, resolve: { courses: resolve } },
+  {
+    path: 'Courses', canActivateChild: [CanActivateChild], children: [
       // {path: 'Course/:id', component: CourseDetailComponent},
-      {path: 'Popular', component: PopularComponent},
+      { path: 'Popular', component: PopularComponent },
       // {path: 'Checkout', component: CheckoutComponent}
-    ]},
-    {path: 'Cart', component: CartComponent, canActivate: [CanActivate]},
-    {path: 'Courses/Course/:id', component: CourseDetailComponent, canActivate: [CanActivate]},
-    {path: 'Wishlist', component: WishlistComponent, canActivate: [CanActivate]},
-    {path: 'Checkout', component: CheckoutComponent, canActivate: [CanActivate]},
-    {path: 'Login', component: LoginComponent},
-    {path: '**', component: NotFoundComponent},
-  ]
+    ]
+  },
+  { path: 'Cart', component: CartComponent, canActivate: [CanActivate] },
+  { path: 'Courses/Course/:id', component: CourseDetailComponent, canActivate: [CanActivate] },
+  { path: 'Wishlist', component: WishlistComponent, canActivate: [CanActivate] },
+  { path: 'Checkout', component: CheckoutComponent, canActivate: [CanActivate] },
+  { path: 'Login', component: LoginComponent },
+  { path: '**', component: NotFoundComponent },
+]
 
 @NgModule({
-    imports: [
-        // RouterModule.forRoot(routes, {enableTracing: true})
-        RouterModule.forRoot(routes)
-    ],
-    exports: [RouterModule]
+  imports: [
+    // RouterModule.forRoot(routes, {enableTracing: true})
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule]
 })
-export class RoutingModule{
+export class RoutingModule {
 
 }

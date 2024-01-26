@@ -1,39 +1,42 @@
 <div class="page-header-topbar">
-<div class="page-header">
+  <div class="page-header">
     <!--HOME HEADER-->
     <div class="page-header-logo">
-      <img routerLink="Home" class="bd-placeholder-img" width="auto" height="50" style="margin-top: -10px;" src="../../assets/logo.png"
-      preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+      <img routerLink="Home" class="bd-placeholder-img" width="auto" height="50" style="margin-top: -10px;"
+        src="../../assets/logo.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+        aria-label="Placeholder: Thumbnail">
     </div>
     <div>
       <div class="page-header-secondary">
-        
-      </div>      
+
+      </div>
       <div class="page-header-primary">
         <div class="page-header-primary-nav">
-            <a routerLink="Home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Courses</a>
-            <a [routerLink]="'Wishlist'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">My Wish List</a>
-            <a routerLink="Cart" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Cart Details</a>
-            <a routerLink="Profile" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">My Profile Page</a>
+          <a routerLink="Home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Courses</a>
+          <a [routerLink]="'Wishlist'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">My Wish
+            List</a>
+          <a routerLink="Cart" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Cart Details</a>
+          <a routerLink="Profile" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">My Profile
+            Page</a>
         </div>
         <div class="page-header-secondory-nav">
 
-            <div class="cart-icon" (click)="toggleCartWidget()">
-              <i class="fa fa-shopping-cart"></i>
-              <span class="cart-badge" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
-            </div>
-            <div>
-              <!-- Conditionally render app-cart-widget based on showCartWidget -->
-              <app-cart-widget *ngIf="showCartWidget"></app-cart-widget>
-            </div>
+          <div class="cart-icon" (click)="toggleCartWidget()">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
+          </div>
+          <div>
+            <!-- Conditionally render app-cart-widget based on showCartWidget -->
+            <app-cart-widget *ngIf="showCartWidget"></app-cart-widget>
+          </div>
 
         </div>
 
         <div class="page-header-login-logout">
-            <a routerLink="/Login">LOGIN</a>
-            <a routerLink="/Login" [queryParams]="{logout: true}">LOGOUT</a>
+          <a routerLink="/Login">LOGIN</a>
+          <a routerLink="/Login" [queryParams]="{logout: true}">LOGOUT</a>
         </div>
       </div>
-      
+
     </div>
   </div>

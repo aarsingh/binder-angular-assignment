@@ -5,7 +5,11 @@
 <div class="home-page-popular-courses">
     <div class="home-page-popular-courses-desc">
         <p>
-            <b>Highest rated courses by students: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <b>Highest rated courses by students: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
     </div>
 
@@ -13,17 +17,18 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="form-group">
-                <label for="sortBy">Search by:</label>
-                    <input class="form-control" [(ngModel)]="searchTerm" placeholder="Search by title, author, or tags" (ngModelChange)="searchCourses()">
+                    <label for="sortBy">Search by:</label>
+                    <input class="form-control" [(ngModel)]="searchTerm" placeholder="Search by title, author, or tags"
+                        (ngModelChange)="searchCourses()">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="sortBy">Sort by:</label>
                     <select id="sortBy" class="form-control" [(ngModel)]="sortBy" (ngModelChange)="sortCourses()">
-                    <option value="default">Default</option>
-                    <option value="lowest">Lowest Price</option>
-                    <option value="highest">Highest Price</option>
+                        <option value="default">Default</option>
+                        <option value="lowest">Lowest Price</option>
+                        <option value="highest">Highest Price</option>
                     </select>
                 </div>
             </div>
@@ -32,18 +37,18 @@
 
     <div *ngIf="(cartService.successMessage$ | async) as successMessage">
         <div class="success-message fade-in">
-          {{ successMessage }}
+            {{ successMessage }}
         </div>
-      </div>
+    </div>
 
     <div class="course-card" *ngFor="let course of popularCourses">
 
         <div class="course-rating course-wishlist" *ngIf="course.isInWishlist">
             <i class="fa fa-star" style="color: yellow;"></i>
-          </div>
-          <div class="course-rating course-wishlist" *ngIf="!course.isInWishlist">
+        </div>
+        <div class="course-rating course-wishlist" *ngIf="!course.isInWishlist">
             <i class="fa fa-star" style="color: rgb(221, 221, 221);"></i>
-          </div>
+        </div>
 
         <div class="course-image">
             <img [src]="course.image" [routerLink]="'/Courses/Course/'+ course.id">
@@ -52,18 +57,22 @@
             {{ course.courseName }}
         </div>
         <div class="course-desc">
-           <b>Author:</b> {{ course.author }}
+            <b>Author:</b> {{ course.author }}
         </div>
         <div class="course-price-rating">
-            <div class="course-price"><b>PRICE:</b> <span class="course-price-span" [ngStyle]="{ 'text-decoration': course.discountPercentage > 0 ? 'line-through' : 'none' }">{{ course.actualPrice | currency:'INR' }}</span></div>
-            <div class="course-rating" *ngIf="course.discountPercentage > 0"><b>DISCOUNT:</b> {{ course.discountPercentage }}%</div>
-            <div class="course-rating" *ngIf="course.discountPercentage > 0"><b>FINAL PRICE:</b> {{ course.actualPrice - ((course.discountPercentage/100) * course.actualPrice) | currency:'INR' }}</div>
+            <div class="course-price"><b>PRICE:</b> <span class="course-price-span"
+                    [ngStyle]="{ 'text-decoration': course.discountPercentage > 0 ? 'line-through' : 'none' }">{{
+                    course.actualPrice | currency:'INR' }}</span></div>
+            <div class="course-rating" *ngIf="course.discountPercentage > 0"><b>DISCOUNT:</b> {{
+                course.discountPercentage }}%</div>
+            <div class="course-rating" *ngIf="course.discountPercentage > 0"><b>FINAL PRICE:</b> {{ course.actualPrice -
+                ((course.discountPercentage/100) * course.actualPrice) | currency:'INR' }}</div>
 
         </div>
         <div class="course-tag-container">
             <div class="course-rating"><b>TAGS:</b></div>
             <div class="tag-container">
-                
+
                 <ul class="tags green" *ngFor="let tag of course.tags">
                     <li><span>{{ tag }}</span></li>
                 </ul>
@@ -71,15 +80,13 @@
         </div>
         <div class="course-action-buttons">
 
-                  <button class="btn" (click)="addToCart(course, course.quantity)">
-                    Add to Cart
-                  </button>
-                  
-                  <app-confirmation-modal confirmationModal
-                    [showModal]="courseModals.get(course.id) || false"
-                    [modalMessage]="modalMessage"
-                    (confirmAction)="confirmAction($event, course, course.quantity)"
-                  ></app-confirmation-modal>
+            <button class="btn" (click)="addToCart(course, course.quantity)">
+                Add to Cart
+            </button>
+
+            <app-confirmation-modal confirmationModal [showModal]="courseModals.get(course.id) || false"
+                [modalMessage]="modalMessage"
+                (confirmAction)="confirmAction($event, course, course.quantity)"></app-confirmation-modal>
 
 
             <button class="btn" (click)="addToWishlist(course)">Add to Wishlist</button>
@@ -88,10 +95,8 @@
 
     <div class="popular-course-bottom course-next-pre-buttons">
         <button class="btn" (click)="prevPage()">Previous</button>
-            <span>Page {{ currentPage }}</span>
+        <span>Page {{ currentPage }}</span>
         <button class="btn" (click)="nextPage()">Next</button>
     </div>
-    
+
 </div>
-
-

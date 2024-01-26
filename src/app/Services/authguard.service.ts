@@ -5,7 +5,7 @@ import { AuthService } from './auth.service';
 import { Course } from '../Models/course';
 import { CourseService } from './course.service';
 
-export interface IDeactivateComponent{
+export interface IDeactivateComponent {
     canExit: () => boolean | Observable<boolean> | Promise<boolean>;
 }
 
@@ -19,11 +19,10 @@ export class AuthGuardService implements CanActivate, CanActivateChild, CanDeact
     courseService: CourseService = inject(CourseService);
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-        boolean | Observable<boolean> | Promise<boolean>
-    {
-        if(this.authService.IsAuthenticated()){
+        boolean | Observable<boolean> | Promise<boolean> {
+        if (this.authService.IsAuthenticated()) {
             return true;
-        }else{
+        } else {
             this.router.navigate(['/Login']);
             return false;
         }
@@ -34,9 +33,8 @@ export class AuthGuardService implements CanActivate, CanActivateChild, CanDeact
         return this.canActivate(childRoute, state);
     }
 
-    canDeactivate(component: IDeactivateComponent, currentRoute: ActivatedRouteSnapshot, 
-        currentState: RouterStateSnapshot, nextState: RouterStateSnapshot) 
-    {
+    canDeactivate(component: IDeactivateComponent, currentRoute: ActivatedRouteSnapshot,
+        currentState: RouterStateSnapshot, nextState: RouterStateSnapshot) {
         return component.canExit();
     }
 

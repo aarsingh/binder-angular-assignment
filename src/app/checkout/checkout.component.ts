@@ -12,7 +12,7 @@ export class CheckoutComponent {
   router: Router = inject(Router);
   course;
 
-  ngOnInit(){
+  ngOnInit() {
     // this.activeRoute.data.subscribe((data) => {
     //   this.course = data;
     // })

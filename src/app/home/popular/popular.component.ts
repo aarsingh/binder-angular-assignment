@@ -31,10 +31,10 @@ export class PopularComponent {
   pageSize = 4;
   currentPage = 1;
 
-   // Use a Map to store showModal state for each course
-   courseModals: Map<number, boolean> = new Map<number, boolean>();
+  // Use a Map to store showModal state for each course
+  courseModals: Map<number, boolean> = new Map<number, boolean>();
 
-  ngOnInit(){
+  ngOnInit() {
     this.loadCourses();
   }
 
@@ -57,7 +57,7 @@ export class PopularComponent {
     }
   }
 
-  navigateToCourses(){
+  navigateToCourses() {
     this.router.navigateByUrl('Courses');
   }
 
@@ -65,7 +65,7 @@ export class PopularComponent {
     const index = this.cartService.getCart().findIndex(item => item.id === course.id);
     if (index !== -1) {
       this.modalMessage = `The course "${course.courseName}" is already in your cart!`;
-       this.courseModals.set(course.id, true);
+      this.courseModals.set(course.id, true);
     } else {
       this.cartService.showSuccessMessage(`Product "${course.courseName}" added to the cart.`);
       this.cartService.addToCart(course, quantity);

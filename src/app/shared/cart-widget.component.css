@@ -1,64 +1,64 @@
 .cart-widget {
-    position: fixed;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    top: 20px;
-    right: 20px;
-    min-width: 220px;
-    min-height: 140px;
-    z-index: 1;
-  }
+  position: fixed;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  top: 20px;
+  right: 20px;
+  min-width: 220px;
+  min-height: 140px;
+  z-index: 1;
+}
 
-  .empty-div {
-    text-align: center;
-    padding: 10px;
-  }
+.empty-div {
+  text-align: center;
+  padding: 10px;
+}
 
-  .card-header {
-    height: 35px;
-    background: #235c5c;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 5px;
-  }
-  
-  .cart-item {
-    padding: 10px;
-  }
+.card-header {
+  height: 35px;
+  background: #235c5c;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
 
-  .total-cost {
-    padding: 10px;
-  }
+.cart-item {
+  padding: 10px;
+}
 
-  .close-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    background-color: #ff5733;
-    width: 20px;
-    color: #fff;
-    border: 1px solid #8b3131;
-    border-radius: 5px;
-  }
+.total-cost {
+  padding: 10px;
+}
 
-  .card-footer {
-    padding: 10px;
-  }
-  
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  background-color: #ff5733;
+  width: 20px;
+  color: #fff;
+  border: 1px solid #8b3131;
+  border-radius: 5px;
+}
 
-  .cart-widget {
+.card-footer {
+  padding: 10px;
+}
+
+
+.cart-widget {
   display: none;
 }
 
 .cart-widget.visible {
-  display: block; 
+  display: block;
 }
 
-.empty-div .btn{
+.empty-div .btn {
   padding: 5px 18px;
   border: none;
   border-radius: 2px;
@@ -69,13 +69,13 @@
   border: 1px solid #8b3131;
 }
 
-.card-footer .btn{
-    padding: 5px 18px;
-    border: none;
-    border-radius: 2px;
-    font-size: 12px;
-    margin: 0px 5px;
-    background-color: #ff5733;
-    color: #fff;
-    border: 1px solid #8b3131;
+.card-footer .btn {
+  padding: 5px 18px;
+  border: none;
+  border-radius: 2px;
+  font-size: 12px;
+  margin: 0px 5px;
+  background-color: #ff5733;
+  color: #fff;
+  border: 1px solid #8b3131;
 }

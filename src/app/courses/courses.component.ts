@@ -8,26 +8,25 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css']
 })
-export class CoursesComponent implements OnInit{
+export class CoursesComponent implements OnInit {
   coursesService = inject(CourseService);
   AllCourses: Course[];
   searchString: string;
 
   activeRoute: ActivatedRoute = inject(ActivatedRoute);
 
-  ngOnInit(){
+  ngOnInit() {
     this.activeRoute.queryParamMap.subscribe((data) => {
       this.searchString = data.get('search');
 
-      if(this.searchString === undefined || this.searchString === '' || this.searchString === null){
+      if (this.searchString === undefined || this.searchString === '' || this.searchString === null) {
         this.AllCourses = this.activeRoute.snapshot.data['courses'];
-      }else{
+      } else {
         this.AllCourses = this.coursesService.courses
           .filter(x => x.courseName.toLowerCase()
-          .includes(this.searchString.toLowerCase()));
+            .includes(this.searchString.toLowerCase()));
       }
     })
 
-    
   }
 }

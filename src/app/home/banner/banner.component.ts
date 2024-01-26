@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class BannerComponent {
   router: Router = inject(Router);
 
-  OnSearchClicked(value: string){
+  OnSearchClicked(value: string) {
     //console.log(value);
-    this.router.navigate(['/Courses'], { queryParams: {search: value}});
+    this.router.navigate(['/Courses'], { queryParams: { search: value } });
   }
 }

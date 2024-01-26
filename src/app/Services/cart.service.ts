@@ -29,8 +29,8 @@ export class CartService {
 
   showSuccessMessage(message: string) {
     this.successMessageSubject.next(message);
-     // Auto-hide after 2 seconds
-     timer(2000).pipe(switchMap(() => this.successMessageSubject)).subscribe(() => {
+    // Auto-hide after 2 seconds
+    timer(2000).pipe(switchMap(() => this.successMessageSubject)).subscribe(() => {
       this.successMessageSubject.next(null);
     });
   }

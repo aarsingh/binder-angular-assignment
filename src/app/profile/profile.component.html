@@ -7,7 +7,7 @@
     <img [src]="profileImageUrl" alt="Profile Image" (click)="openImageUploader()">
     <input type="file" #imageInput (change)="onImageChange(imageInput.files)">
     <i class="material-icons">photo_camera</i>
-  </div> 
+  </div>
 
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -31,11 +31,12 @@
     <div class="form-group">
       <label for="aboutYourself">About Yourself:</label>
       <textarea id="aboutYourself" formControlName="aboutYourself" maxlength="100"></textarea>
-      
+
 
       <div *ngIf="userForm.get('aboutYourself').invalid && userForm.get('aboutYourself').touched">
         <!-- <p *ngIf="userForm.get('aboutYourself').errors?.maxlength">About yourself should not exceed 100 characters.</p> -->
-        <p  class="error" *ngIf="userForm.get('aboutYourself').errors?.['maxlength']">About yourself should not exceed 100 characters.</p>
+        <p class="error" *ngIf="userForm.get('aboutYourself').errors?.['maxlength']">About yourself should not exceed
+          100 characters.</p>
       </div>
 
     </div>

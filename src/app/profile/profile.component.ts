@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class profileComponent implements OnInit  {
+export class profileComponent implements OnInit {
   userForm: FormGroup;
   profileImageUrl: string = 'default-profile-image.jpg';
 
@@ -71,10 +71,5 @@ export class profileComponent implements OnInit  {
     localStorage.setItem('profileImageUrl', this.profileImageUrl);
   }
 }
-
-
-
-
-
 
 

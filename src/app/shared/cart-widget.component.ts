@@ -16,21 +16,21 @@ export class CartWidgetComponent implements OnInit, OnDestroy {
   isCartWidgetVisible: boolean;
   private cartVisibilitySubscription: Subscription;
 
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(private cartService: CartService, private router: Router) { }
 
-  
+
   ngOnInit(): void {
     this.cartService.cartItems$.subscribe((items) => {
-        this.cartItems = items;
-      });
-      
+      this.cartItems = items;
+    });
+
     this.cartVisibilitySubscription = this.cartService.cartWidgetVisibility$.subscribe(
       (isVisible) => {
         document.getElementById('cartWidget').classList.add('visible');
         this.isCartWidgetVisible = isVisible;
       }
     );
-  } 
+  }
 
   ngOnDestroy(): void {
     this.cartVisibilitySubscription.unsubscribe();
@@ -40,7 +40,7 @@ export class CartWidgetComponent implements OnInit, OnDestroy {
     return this.cartItems.reduce((total, item) => total + item.actualPrice, 0);
   }
 
-  goToCheckout(){
+  goToCheckout() {
     this.router.navigateByUrl('Cart');
     document.getElementById('cartWidget').classList.remove('visible');
   }

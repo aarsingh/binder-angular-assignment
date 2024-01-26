@@ -14,17 +14,16 @@ export class AppComponent {
 
   router: Router = inject(Router);
 
-  ngOnInit(){
+  ngOnInit() {
     this.router.events.subscribe((routerEvent: Event) => {
-      if(routerEvent instanceof NavigationStart){
+      if (routerEvent instanceof NavigationStart) {
         this.showLoader = true;
       }
 
-      if(routerEvent instanceof NavigationEnd 
+      if (routerEvent instanceof NavigationEnd
         || routerEvent instanceof NavigationCancel
         || routerEvent instanceof NavigationError
-        )
-      {
+      ) {
         this.showLoader = false;
       }
     })

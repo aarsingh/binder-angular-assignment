@@ -15,7 +15,7 @@ export class WishlistService {
   private wishlistSubject = new BehaviorSubject<Course[]>([]);
   wishlist$ = this.wishlistSubject.asObservable();
 
-  constructor(private courseService: CourseService, private cartService: CartService){}
+  constructor(private courseService: CourseService, private cartService: CartService) { }
 
   /*
   addToWishlist(course: Course): void {
@@ -63,7 +63,7 @@ export class WishlistService {
 
   moveFromWishlistToCart(course: Course): void {
     const index = this.wishlistCourses.findIndex((item) => item.id === course.id);
-    
+
     if (index !== -1) {
       // Remove from wishlist
       this.wishlistCourses.splice(index, 1);

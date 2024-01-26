@@ -1,21 +1,19 @@
-
-  
-   <div class="about-us-banner">
+<div class="about-us-banner">
     <div class="about-us-banner-layover">
         <h1>Discover Latest Courses on React</h1>
     </div>
-    </div>
-  
-  <nav>
+</div>
+
+<nav>
     <a routerLink="/">All Courses</a> /
     <span>{{ selectedCourse.courseName }}</span>
-  </nav>
+</nav>
 
-  <div *ngIf="(cartService.successMessage$ | async) as successMessage">
+<div *ngIf="(cartService.successMessage$ | async) as successMessage">
     <div class="success-message fade-in">
-      {{ successMessage }}
+        {{ successMessage }}
     </div>
-  </div>
+</div>
 
 <div class="courses-detail-main-container">
     <div class="course-detail-container">
@@ -29,45 +27,53 @@
             <div class="course-info">
                 <div class="course-info-author"><b>Author: </b>{{ selectedCourse.author }}</div>
                 <div class="course-info-author"><b>Price: </b>{{ selectedCourse.actualPrice | currency:'INR' }}</div>
-                <div class="course-info-author" *ngIf="selectedCourse.discountPercentage > 0"><b>Discount: </b>{{ selectedCourse.discountPercentage }}%</div>
-                <div class="course-info-author" *ngIf="selectedCourse.discountPercentage > 0"><b>Final Price: </b>{{ selectedCourse.actualPrice - ((selectedCourse.discountPercentage/100) * selectedCourse.actualPrice) | currency:'INR' }}</div>
-            </div>    
+                <div class="course-info-author" *ngIf="selectedCourse.discountPercentage > 0"><b>Discount: </b>{{
+                    selectedCourse.discountPercentage }}%</div>
+                <div class="course-info-author" *ngIf="selectedCourse.discountPercentage > 0"><b>Final Price: </b>{{
+                    selectedCourse.actualPrice - ((selectedCourse.discountPercentage/100) * selectedCourse.actualPrice)
+                    | currency:'INR' }}</div>
+            </div>
             <div class="course-desc">
                 <ul class="tags green" *ngFor="let tag of selectedCourse.tags">
                     <li><span>{{ tag }}</span></li>
                 </ul>
-            </div>      
+            </div>
         </div>
 
         <div class="course-action-items">
             <div class="side-bar-banner">
-                <video class="side-bar-banner-video" autoplay width="320" height="240" poster="{{selectedCourse.image}}">
+                <video class="side-bar-banner-video" autoplay width="320" height="240"
+                    poster="{{selectedCourse.image}}">
                     <source src="../../../assets/video/course.mp4" type="video/mp4">
                 </video>
-                <h2 *ngIf="selectedCourse.discountPercentage > 0">Get Flat {{selectedCourse.discountPercentage}}% Off on this course.</h2>
+                <h2 *ngIf="selectedCourse.discountPercentage > 0">Get Flat {{selectedCourse.discountPercentage}}% Off on
+                    this course.</h2>
             </div>
             <div class="course-price-discount" *ngIf="selectedCourse.discountPercentage > 0">
-                <span style="font-size: 24px; font-weight: bold; color: #222; margin:0px 5px;">{{ courseDiscountPrice | currency: 'INR' }}</span>
-                <span style="font-size: 18px; font-weight: bold; color: #444; margin:0px 5px;"><s>{{ selectedCourse.actualPrice | currency: 'INR' }}</s></span>
-                <span class="span-discount" style="font-size: 18px; color: #222; margin:0px 5px;">{{selectedCourse.discountPercentage}} OFF</span>
+                <span style="font-size: 24px; font-weight: bold; color: #222; margin:0px 5px;">{{ courseDiscountPrice |
+                    currency: 'INR' }}</span>
+                <span style="font-size: 18px; font-weight: bold; color: #444; margin:0px 5px;"><s>{{
+                        selectedCourse.actualPrice | currency: 'INR' }}</s></span>
+                <span class="span-discount"
+                    style="font-size: 18px; color: #222; margin:0px 5px;">{{selectedCourse.discountPercentage}}
+                    OFF</span>
                 <div class="offer-timer">
-                    <p><i class="fa fa-clock-o" aria-hidden="true"></i><b> {{ timeRemaining }} </b> left at this price.</p>
+                    <p><i class="fa fa-clock-o" aria-hidden="true"></i><b> {{ timeRemaining }} </b> left at this price.
+                    </p>
                 </div>
             </div>
             <div class="course-action-buttons">
 
                 <button class="btn btn-add-to-cart" (click)="addToCart(selectedCourse, selectedCourse.quantity)">
-                  Add to Cart
+                    Add to Cart
                 </button>
-                
-                <app-confirmation-modal confirmationModal
-                  [showModal]="courseModals.get(selectedCourse.id) || false"
-                  [modalMessage]="modalMessage"
-                  (confirmAction)="confirmAction($event, selectedCourse, selectedCourse.quantity)"
-                ></app-confirmation-modal>
 
-          <button class="btn" (click)="addToWishlist(selectedCourse)">Add to Wishlist</button>
-      </div>
+                <app-confirmation-modal confirmationModal [showModal]="courseModals.get(selectedCourse.id) || false"
+                    [modalMessage]="modalMessage"
+                    (confirmAction)="confirmAction($event, selectedCourse, selectedCourse.quantity)"></app-confirmation-modal>
+
+                <button class="btn" (click)="addToWishlist(selectedCourse)">Add to Wishlist</button>
+            </div>
         </div>
-    </div>    
+    </div>
 </div>

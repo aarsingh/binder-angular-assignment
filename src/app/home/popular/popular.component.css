@@ -1,20 +1,20 @@
-.section-header{
+.section-header {
     margin-top: 50px;
     text-align: center;
 }
 
-.home-page-popular-courses{
+.home-page-popular-courses {
     display: flex;
     flex-wrap: wrap;
     padding: 25px 100px;
 }
 
-.home-page-popular-courses-desc{
+.home-page-popular-courses-desc {
     font-size: 14px;
     margin: 30px 0px;
 }
 
-.course-card{
+.course-card {
     width: min-content;
     height: 410px;
     border-radius: 2px;
@@ -28,12 +28,12 @@
     min-height: 70px;
 }
 
-.course-image{
+.course-image {
     width: 250px;
     height: 160px;
 }
 
-img{
+img {
     width: 250px;
     height: 160px;
 }
@@ -42,26 +42,29 @@ img{
     display: block;
 }
 
-.course-title{
+.course-title {
     min-height: 60px;
     padding: 5px 10px;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
 }
-.course-desc{
+
+.course-desc {
     font-size: 12px;
     padding: 5px 10px;
     text-align: center;
 }
-.course-price-rating{
+
+.course-price-rating {
     display: flex;
     padding: 5px 5px;
     border-bottom: #F2F3F4 3px solid;
     border-top: #F2F3F4 3px solid;
 }
 
-.course-price, .course-rating{
+.course-price,
+.course-rating {
     width: 50%;
     font-size: 10px;
     margin: 0px 0px;
@@ -79,42 +82,42 @@ img{
 
 .course-tag {
     display: inline-block;
-    position:relative;
+    position: relative;
     padding: .7em;
     padding-left: 2em;
     margin: 0 .5em .5em 0;
     background: #8dc63f;
-    color: rgba(255,255,255,.6);
-    text-decoration:none;
+    color: rgba(255, 255, 255, .6);
+    text-decoration: none;
     font-weight: bold;
 }
 
 
 .tag-container {
     width: auto;
-  }
-  
-  .tags {
+}
+
+.tags {
     zoom: 1;
     list-style-type: none;
-  }
-  
-  .tags:after {
+}
+
+.tags:after {
     clear: both;
-  }
-  
-  .tags li {
+}
+
+.tags li {
     position: relative;
     float: left;
     margin: 0 0 8px 8px;
-  }
-  
-  .tags li:active {
+}
+
+.tags li:active {
     margin-top: 1px;
     margin-bottom: 7px;
-  }
-  
-  .tags span {
+}
+
+.tags span {
     line-height: 23px;
     padding: 0 9px 0 8px;
     font-size: 9px;
@@ -125,7 +128,7 @@ img{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    
+
     border-width: 1px 1px 1px 1px;
     border-style: solid;
     border-color: #dadada #d2d2d2 #c5c5c5;
@@ -134,31 +137,34 @@ img{
     background-image: -moz-linear-gradient(top, #fcfcfc, #f0f0f0);
     background-image: -o-linear-gradient(top, #fcfcfc, #f0f0f0);
     background-image: linear-gradient(to bottom, #fcfcfc, #f0f0f0);
-  }
+}
 
-.popular-course-bottom{
+.popular-course-bottom {
     margin: 30px auto;
     width: 100%;
     text-align: center;
 }
-.course-action-buttons{
+
+.course-action-buttons {
     padding: 5px 0px;
     position: absolute;
     bottom: 8px;
 }
-.course-next-pre-buttons{
+
+.course-next-pre-buttons {
     padding: 5px 0px;
     position: relative;
     bottom: 5px;
 }
-.go-to-course-button{
+
+.go-to-course-button {
     padding: 20px 50px;
     border: none;
     background-color: #FF5733;
     color: white;
 }
 
-.btn{
+.btn {
     padding: 5px 18px;
     border: none;
     border-radius: 2px;
@@ -185,13 +191,13 @@ img{
     display: block;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-  }
-  
-  /* Add animation to fade in and out */
-  .success-message.fade-in {
+}
+
+/* Add animation to fade in and out */
+.success-message.fade-in {
     opacity: 1;
-  }
-  
-  .success-message.fade-out {
+}
+
+.success-message.fade-out {
     opacity: 0;
-  }
+}

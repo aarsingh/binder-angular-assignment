@@ -21,7 +21,7 @@ export class HeaderComponent {
   cartItemCount: number = 0;
   showCartWidget: boolean = false;
 
-  ngOnInit(){
+  ngOnInit() {
     this.cartService.cartItems$.subscribe((items) => {
       this.cartItemCount = items.length;
     });
@@ -32,15 +32,15 @@ export class HeaderComponent {
     this.showCartWidget = !this.showCartWidget;
   }
 
-  navigateToCourses(){
+  navigateToCourses() {
     this.router.navigateByUrl('Courses');
   }
 
-  navigateToWishlist(){
+  navigateToWishlist() {
     this.router.navigateByUrl('Wishlist');
   }
 
-  navigateToCart(){
+  navigateToCart() {
     this.router.navigateByUrl('Cart');
   }
 

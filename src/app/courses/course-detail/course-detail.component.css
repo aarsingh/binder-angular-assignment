@@ -1,61 +1,69 @@
-.courses-detail-main-container{
+.courses-detail-main-container {
     width: 80%;
     margin: 50px auto;
     background-color: #efefef;
     padding: 10px 0px;
 }
-.course-detail-container{
+
+.course-detail-container {
     width: 90%;
     margin: 20px auto;
     padding: 10px 10px;
-    display:flex;
+    display: flex;
 }
-.course-details{
+
+.course-details {
     width: 70%;
     background-color: #fff;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.course-banner-image{
+.course-banner-image {
     width: 100%;
     height: 320px;
 }
-.course-title{
+
+.course-title {
     margin: 10px 0px;
     width: 100%;
     text-align: center;
 }
-.course-info{
+
+.course-info {
     display: flex;
     width: 100%;
     margin: 10px 0px;
 }
-.course-info-rating, .course-info-duration,.course-info-author{
+
+.course-info-rating,
+.course-info-duration,
+.course-info-author {
     width: 33%;
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
 }
-.course-desc{
+
+.course-desc {
     padding: 30px 50px;
     font-size: 14px;
 }
 
-.course-fake-rewiews-list{
+.course-fake-rewiews-list {
     padding: 30px 50px;
     font-size: 14px;
 }
 
-hr{
+hr {
     margin: 10px 0px;
     border: #DDD 2px solid;
-  }
+}
 
-.course-fake-rewiews{
+.course-fake-rewiews {
     margin: 15px 0px;
 }
 
-.course-action-items{
+.course-action-items {
     width: 28%;
     margin-left: 20px;
     padding: 5px 5px;
@@ -63,14 +71,15 @@ hr{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.side-bar-banner{
+.side-bar-banner {
     width: 100%;
     height: 320px;
     background-color: #28282B;
     text-align: center;
     /* padding: 70px 20px; */
-    color:white;
+    color: white;
 }
+
 .side-bar-banner-video {
     width: 100%;
     height: auto;
@@ -79,7 +88,9 @@ hr{
     /* padding: 70px 20px; */
     color: white;
 }
-.course-selection-cat, .course-apply-coupon{
+
+.course-selection-cat,
+.course-apply-coupon {
     display: flex;
     width: 100%;
 }
@@ -88,27 +99,32 @@ hr{
     position: relative;
     display: block;
 }
-.course-selection-personal{
+
+.course-selection-personal {
     width: 50%;
     padding: 10px 0px;
     text-align: center;
     border-bottom: #28282B 2px solid;
 }
-.course-selection-team{
+
+.course-selection-team {
     width: 50%;
     padding: 10px 0px;
     text-align: center;
     border-bottom: #dddddd 2px solid;
 }
-.course-price-discount{
+
+.course-price-discount {
     padding: 15px 20px;
 }
-.offer-timer{
+
+.offer-timer {
     color: #CB4335;
     font-size: 14px;
     padding: 5px 5px;
 }
-.buy-course-button{
+
+.buy-course-button {
     padding: 10px 30px;
     width: 90%;
     margin: 10px 15px;
@@ -117,14 +133,15 @@ hr{
     color: white;
 }
 
-.guarantee-div{
+.guarantee-div {
     width: 100%;
     padding: 10px 50px;
     text-align: center;
     font-size: 12px;
 }
 
-.course-selection-gift, .course-selection-coupon{
+.course-selection-gift,
+.course-selection-coupon {
     width: 50%;
     padding: 10px 0px;
     text-align: center;
@@ -133,19 +150,21 @@ hr{
     font-weight: bold;
 }
 
-.course-selection-gift > a, .course-selection-coupon > a{
+.course-selection-gift>a,
+.course-selection-coupon>a {
     color: #28282B;
     font-weight: bold;
 }
 
-.devider{
+.devider {
     border-bottom: #ddd 2px solid;
     margin: 30px 0px;
 }
-.devider-message{
+
+.devider-message {
     width: 30px;
     height: 30px;
-    padding:4px 7px;
+    padding: 4px 7px;
     font-size: 12px;
     border: #ddd 2px solid;
     border-radius: 50%;
@@ -156,23 +175,23 @@ hr{
     color: #888;
 }
 
-.subscribe-to{
+.subscribe-to {
     width: 100%;
     font-size: 18px;
     padding: 20px 20px;
 }
 
-.subscribe-to > p{
+.subscribe-to>p {
     font-size: 12px;
     margin: 20px 0px;
 }
 
-.subscribe-to > p > a{
+.subscribe-to>p>a {
     font-weight: bold;
     color: #CB4335;
 }
 
-.subscribe-course-button{
+.subscribe-course-button {
     padding: 10px 30px;
     width: 90%;
     margin: 10px 15px;
@@ -181,20 +200,23 @@ hr{
     background-color: white;
 }
 
-.prev-nect-course{
+.prev-nect-course {
     margin: 20px 0px;
     padding: 30px 0px;
 }
-.prev-nect-course > button {
+
+.prev-nect-course>button {
     padding: 10px 30px;
     border: none;
     background-color: #CB4335;
-    color:#ddd;
+    color: #ddd;
 }
-.prev-btn{
+
+.prev-btn {
     float: left;
 }
-.next-btn{
+
+.next-btn {
     float: right;
 }
 
@@ -202,24 +224,24 @@ hr{
 .tags {
     zoom: 1;
     list-style-type: none;
-  }
-  
-  .tags:after {
+}
+
+.tags:after {
     clear: both;
-  }
-  
-  .tags li {
+}
+
+.tags li {
     position: relative;
     float: left;
     margin: 0 0 8px 8px;
-  }
-  
-  .tags li:active {
+}
+
+.tags li:active {
     margin-top: 1px;
     margin-bottom: 7px;
-  }
-  
-  .tags span {
+}
+
+.tags span {
     /* height: 26px; */
     line-height: 23px;
     padding: 0 9px 0 8px;
@@ -239,76 +261,80 @@ hr{
     background-image: -moz-linear-gradient(top, #fcfcfc, #f0f0f0);
     background-image: -o-linear-gradient(top, #fcfcfc, #f0f0f0);
     background-image: linear-gradient(to bottom, #fcfcfc, #f0f0f0);
-  }
+}
 
 
-  /* Style for Breadcrumb Container */
+/* Style for Breadcrumb Container */
 nav {
     background-color: #f5f5f5;
     padding: 10px;
     margin-bottom: 20px;
-  }
-  
-  /* Style for Individual Breadcrumb Item */
-  nav a {
+}
+
+/* Style for Individual Breadcrumb Item */
+nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     margin-right: 10px;
-  }
-  
-  /* Style for the Last Breadcrumb Item (Current Page) */
-  nav span {
+}
+
+/* Style for the Last Breadcrumb Item (Current Page) */
+nav span {
     color: #555;
-  }
-  
+}
+
 
 
 /*  */
 
 
-.main-contact-container{
+.main-contact-container {
     width: 80%;
     margin: 50px auto;
     padding: 50px 100px;
     background-color: #efefef;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.about-us-banner{
-  width: 100%;
-  height: 280px;
-  background: url(./../../../assets/images/about-back.jpg);
+
+.about-us-banner {
+    width: 100%;
+    height: 280px;
+    background: url(./../../../assets/images/about-back.jpg);
 }
 
-.about-us-banner-layover{
-  width: 100%;
-  height: 280px;
-  background-color: #28282B;
-  opacity: 0.7;
-  text-align: center;
-  color: white;
-  padding-top: 100px;
+.about-us-banner-layover {
+    width: 100%;
+    height: 280px;
+    background-color: #28282B;
+    opacity: 0.7;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
 }
-h2{
+
+h2 {
     margin: 50px 0px 10px 0px;
 }
-p{
+
+p {
     margin: 10px 0px;
     font-size: 14px;
 }
 
-.contact-input-el, select {
+.contact-input-el,
+select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;  
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color: #FF5733;
     color: white;
     padding: 12px 20px;
@@ -316,15 +342,15 @@ p{
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-  }
-  
-  .container {
+}
+
+.container {
     border-radius: 5px;
     padding: 20px;
     margin-top: 50px;
-  }
+}
 
-  .course-action-buttons{
+.course-action-buttons {
     padding: 5px 0px;
     position: absolute;
     bottom: 8px;
@@ -340,7 +366,7 @@ p{
     margin-bottom: 10px !important;
 }
 
-.btn{
+.btn {
     padding: 5px 18px;
     border: none;
     border-radius: 2px;
@@ -353,7 +379,7 @@ p{
 .success-message {
     border-radius: 5px;
     background-color: #4caf50;
-    color: #fff; 
+    color: #fff;
     padding: 15px;
     position: fixed;
     top: 20%;
@@ -361,14 +387,14 @@ p{
     transform: translateX(-50%);
     z-index: 1;
     display: block;
-    opacity: 0; 
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .success-message.fade-in {
-    opacity: 1;
-  }
-  
-  .success-message.fade-out {
     opacity: 0;
-  }
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success-message.fade-in {
+    opacity: 1;
+}
+
+.success-message.fade-out {
+    opacity: 0;
+}

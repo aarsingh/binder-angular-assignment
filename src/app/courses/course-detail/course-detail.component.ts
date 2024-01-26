@@ -11,7 +11,7 @@ import { timer } from 'rxjs';
   templateUrl: './course-detail.component.html',
   styleUrls: ['./course-detail.component.css']
 })
-export class CourseDetailComponent implements OnInit, OnDestroy{
+export class CourseDetailComponent implements OnInit, OnDestroy {
 
   @Input() course: Course;
 
@@ -31,19 +31,19 @@ export class CourseDetailComponent implements OnInit, OnDestroy{
   modalMessage: string;
   courseModals: Map<number, boolean> = new Map<number, boolean>();
 
-  ngOnInit(){
+  ngOnInit() {
 
     this.paramMapObs = this.activeRoute.paramMap.subscribe((data) => {
       this.courseId = +data.get('id');
       this.selectedCourse = this.courseService.courses.find(course => course.id === this.courseId);
     })
 
-    if(this.selectedCourse.discountPercentage > 0){
+    if (this.selectedCourse.discountPercentage > 0) {
       this.timerInterval = setInterval(() => {
         this.calculateTimeRemaining(this.selectedCourse);
       }, 1000);
     }
-  
+
     this.getDiscount();
   }
 
@@ -65,16 +65,16 @@ export class CourseDetailComponent implements OnInit, OnDestroy{
   }
 
   getDiscount() {
-      let price = (this.selectedCourse.discountPercentage / 100 ) * this.selectedCourse.actualPrice;
-       this.courseDiscountPrice = this.selectedCourse.actualPrice - price;
+    let price = (this.selectedCourse.discountPercentage / 100) * this.selectedCourse.actualPrice;
+    this.courseDiscountPrice = this.selectedCourse.actualPrice - price;
   }
 
   addToCart(course: Course, quantity: number) {
     const index = this.cartService.getCart().findIndex(item => item.id === course.id);
     if (index !== -1) {
       this.modalMessage = `The course "${course.courseName}" is already in your cart!`;
-       // Set showModal for the specific course
-       this.courseModals.set(course.id, true);
+      // Set showModal for the specific course
+      this.courseModals.set(course.id, true);
     } else {
       this.cartService.showSuccessMessage(`Product "${course.courseName}" added to the cart.`);
       this.cartService.addToCart(course, quantity);
@@ -95,7 +95,7 @@ export class CourseDetailComponent implements OnInit, OnDestroy{
     this.wishlistService.addToWishlist(course);
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.paramMapObs.unsubscribe();
     clearInterval(this.timerInterval);
   }

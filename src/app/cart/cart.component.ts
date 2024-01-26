@@ -34,14 +34,14 @@ export class CartComponent implements OnInit {
 
   getPrice() {
     return this.cart.reduce((total, course) => {
-       const discountedPrice = course.actualPrice;
-       return total + discountedPrice;
+      const discountedPrice = course.actualPrice;
+      return total + discountedPrice;
     }, 0);
   }
 
   getTotalQuantity() {
     return this.cart.reduce((total, course) => {
-       return total + course.quantity;
+      return total + course.quantity;
     }, 0);
   }
 
@@ -49,23 +49,23 @@ export class CartComponent implements OnInit {
     return this.cart.reduce((total, course) => {
       const discountedPrice = course.actualPrice;
       return total + discountedPrice * course.quantity;
-   }, 0);
+    }, 0);
   }
 
   getGrandTotal1() {
     return this.cart.reduce((total, course) => {
-       const discountedPrice = course.actualPrice * (1 - course.discountPercentage / 100);
-       return total + discountedPrice * course.quantity;
+      const discountedPrice = course.actualPrice * (1 - course.discountPercentage / 100);
+      return total + discountedPrice * course.quantity;
     }, 0);
   }
 
   getTotalDiscount() {
-    
+
     const totalDiscount: number = this.cart.reduce((total, course) => total + course.discountPercentage, 0);
     console.log(totalDiscount);
     return this.cart.reduce((totalDiscount, course) => {
       let discount = course.discountPercentage;
-       return totalDiscount += discount;
+      return totalDiscount += discount;
     }, 0);
 
   }
@@ -74,7 +74,7 @@ export class CartComponent implements OnInit {
     return this.getGrandTotal() - this.getTotalDiscount();
   }
 
-  YouSaved(){
+  YouSaved() {
     return this.getPrice() - this.getGrandTotal1();
   }
 
@@ -90,7 +90,7 @@ export class CartComponent implements OnInit {
     if (course.quantity > 1) {
       course.quantity--;
     } else {
-       this.cart = this.cart.filter((c: any) => c.id !== course.id);
+      this.cart = this.cart.filter((c: any) => c.id !== course.id);
     }
   }
 
