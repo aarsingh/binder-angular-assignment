@@ -1,0 +1,95 @@
+/* cart-widget.component.css */
+
+.cart-widget {
+    position: fixed;
+    /* top: 0; */
+    /* right: 0; */
+    /* background-color: #f8f8f8; */
+    /* padding: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* background-color: darkcyan; */
+    background-color: #fff;
+    color: #000;
+    top: 20px;
+    right: 20px;
+    min-width: 220px;
+    min-height: 140px;
+    z-index: 1;
+  }
+
+  .empty-div {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .card-header {
+    height: 35px;
+    background: #235c5c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  
+  .cart-item {
+    /* margin-bottom: 5px; */
+    padding: 10px;
+  }
+
+  .total-cost {
+    padding: 10px;
+  }
+
+  .close-button {
+    /* Add styling for the close button */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: #ff5733;
+    width: 20px;
+    color: #fff;
+    border: 1px solid #8b3131;
+    border-radius: 5px;
+    /* Add other styles as needed */
+  }
+
+  .card-footer {
+    padding: 10px;
+  }
+  
+
+  .cart-widget {
+  /* Other styles for the cart widget */
+
+  display: none; /* Initially hide the cart widget */
+}
+
+.cart-widget.visible {
+  display: block; /* Display the cart widget when the 'visible' class is present */
+}
+
+.empty-div .btn{
+  /* padding: 5px 25px; */
+  padding: 5px 18px;
+  border: none;
+  border-radius: 2px;
+  font-size: 12px;
+  margin: 0px 5px;
+  background-color: #ff5733;
+  color: #fff;
+  border: 1px solid #8b3131;
+}
+
+.card-footer .btn{
+    /* padding: 5px 25px; */
+    padding: 5px 18px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 0px 5px;
+    background-color: #ff5733;
+    color: #fff;
+    border: 1px solid #8b3131;
+}

@@ -1,0 +1,383 @@
+.courses-detail-main-container{
+    width: 80%;
+    margin: 50px auto;
+    background-color: #efefef;
+    padding: 10px 0px;
+}
+.course-detail-container{
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px 10px;
+    display:flex;
+}
+.course-details{
+    width: 70%;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.course-banner-image{
+    width: 100%;
+    height: 320px;
+}
+.course-title{
+    margin: 10px 0px;
+    width: 100%;
+    text-align: center;
+}
+.course-info{
+    display: flex;
+    width: 100%;
+    margin: 10px 0px;
+}
+.course-info-rating, .course-info-duration,.course-info-author{
+    width: 33%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.course-desc{
+    padding: 30px 50px;
+    font-size: 14px;
+}
+
+.course-fake-rewiews-list{
+    padding: 30px 50px;
+    font-size: 14px;
+}
+
+hr{
+    margin: 10px 0px;
+    border: #DDD 2px solid;
+  }
+
+.course-fake-rewiews{
+    margin: 15px 0px;
+}
+
+.course-action-items{
+    width: 28%;
+    margin-left: 20px;
+    padding: 5px 5px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.side-bar-banner{
+    width: 100%;
+    height: 320px;
+    background-color: #28282B;
+    text-align: center;
+    /* padding: 70px 20px; */
+    color:white;
+}
+.side-bar-banner-video {
+    width: 100%;
+    height: auto;
+    background-color: #28282B;
+    text-align: center;
+    /* padding: 70px 20px; */
+    color: white;
+}
+.course-selection-cat, .course-apply-coupon{
+    display: flex;
+    width: 100%;
+}
+
+.span-discount {
+    position: relative;
+    display: block;
+}
+.course-selection-personal{
+    width: 50%;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: #28282B 2px solid;
+}
+.course-selection-team{
+    width: 50%;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: #dddddd 2px solid;
+}
+.course-price-discount{
+    padding: 15px 20px;
+}
+.offer-timer{
+    color: #CB4335;
+    font-size: 14px;
+    padding: 5px 5px;
+}
+.buy-course-button{
+    padding: 10px 30px;
+    width: 90%;
+    margin: 10px 15px;
+    border: none;
+    background-color: #CB4335;
+    color: white;
+}
+
+.guarantee-div{
+    width: 100%;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.course-selection-gift, .course-selection-coupon{
+    width: 50%;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 14px;
+    color: #28282B;
+    font-weight: bold;
+}
+
+.course-selection-gift > a, .course-selection-coupon > a{
+    color: #28282B;
+    font-weight: bold;
+}
+
+.devider{
+    border-bottom: #ddd 2px solid;
+    margin: 30px 0px;
+}
+.devider-message{
+    width: 30px;
+    height: 30px;
+    padding:4px 7px;
+    font-size: 12px;
+    border: #ddd 2px solid;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #888;
+}
+
+.subscribe-to{
+    width: 100%;
+    font-size: 18px;
+    padding: 20px 20px;
+}
+
+.subscribe-to > p{
+    font-size: 12px;
+    margin: 20px 0px;
+}
+
+.subscribe-to > p > a{
+    font-weight: bold;
+    color: #CB4335;
+}
+
+.subscribe-course-button{
+    padding: 10px 30px;
+    width: 90%;
+    margin: 10px 15px;
+    border: #CB4335 2px solid;
+    color: #CB4335;
+    background-color: white;
+}
+
+.prev-nect-course{
+    margin: 20px 0px;
+    padding: 30px 0px;
+}
+.prev-nect-course > button {
+    padding: 10px 30px;
+    border: none;
+    background-color: #CB4335;
+    color:#ddd;
+}
+.prev-btn{
+    float: left;
+}
+.next-btn{
+    float: right;
+}
+
+
+.tags {
+    zoom: 1;
+    list-style-type: none;
+  }
+  
+  .tags:after {
+    clear: both;
+  }
+  
+  .tags li {
+    position: relative;
+    float: left;
+    margin: 0 0 8px 8px;
+  }
+  
+  .tags li:active {
+    margin-top: 1px;
+    margin-bottom: 7px;
+  }
+  
+  .tags span {
+    /* height: 26px; */
+    line-height: 23px;
+    padding: 0 9px 0 8px;
+    font-size: 9px;
+    color: #555;
+    text-decoration: none;
+
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    /* text-shadow: 0 1px white; */
+    /* background: #fafafa; */
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #dadada #d2d2d2 #c5c5c5;
+    border-radius: 3px 0 0 3px;
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: -moz-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: -o-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: linear-gradient(to bottom, #fcfcfc, #f0f0f0);
+    /* -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.05); */
+  }
+
+
+  /* Style for Breadcrumb Container */
+nav {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for Individual Breadcrumb Item */
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Style for the Last Breadcrumb Item (Current Page) */
+  nav span {
+    color: #555;
+  }
+  
+
+
+/*  */
+
+
+.main-contact-container{
+    width: 80%;
+    margin: 50px auto;
+    padding: 50px 100px;
+    background-color: #efefef;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.about-us-banner{
+  width: 100%;
+  height: 280px;
+  background: url(./../../../assets/images/about-back.jpg);
+}
+
+.about-us-banner-layover{
+  width: 100%;
+  height: 280px;
+  background-color: #28282B;
+  opacity: 0.7;
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+}
+h2{
+    margin: 50px 0px 10px 0px;
+}
+p{
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+.contact-input-el, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;  
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #FF5733;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .course-action-buttons{
+    padding: 5px 0px;
+    position: absolute;
+    bottom: 8px;
+    padding: 5px 0px;
+    position: absolute;
+    bottom: 8px;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+}
+
+.btn-add-to-cart {
+    margin-bottom: 10px !important;
+}
+
+.btn{
+    /* padding: 5px 25px; */
+    padding: 5px 18px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 0px 5px;
+    /* margin: 0px 10px; */
+    /* background-color: #F4D03F; */
+    background-color: #235c5c;
+    color: #fff;
+}
+
+.success-message {
+    border-radius: 5px;
+    background-color: #4caf50; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 15px; /* Padding */
+    position: fixed; /* Fixed position at the top */
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the message horizontally */
+    z-index: 1; /* Set z-index to appear above other elements */
+    display: block; /* Initially hide the message */
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+  }
+  
+  /* Add animation to fade in and out */
+  .success-message.fade-in {
+    opacity: 1;
+  }
+  
+  .success-message.fade-out {
+    opacity: 0;
+  }

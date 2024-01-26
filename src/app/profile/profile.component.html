@@ -1,0 +1,102 @@
+<div class="user-form-container">
+  <!-- <div class="profile-image">
+    <img src="profile-image-url" alt="Profile Image" (click)="openImageUploader()">
+  </div> -->
+
+  <div class="profile-image">
+    <img [src]="profileImageUrl" alt="Profile Image" (click)="openImageUploader()">
+    <input type="file" #imageInput (change)="onImageChange(imageInput.files)">
+    <i class="material-icons">photo_camera</i>
+  </div> 
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="displayName">Display Name:</label>
+      <input type="text" id="displayName" formControlName="displayName" required>
+      <div *ngIf="userForm.get('displayName').invalid && userForm.get('displayName').touched">
+        <p *ngIf="userForm.get('displayName').errors?.['required']">Display name is required.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" formControlName="firstName" required>
+      <div *ngIf="userForm.get('firstName').invalid && userForm.get('firstName').touched">
+        <p *ngIf="userForm.get('firstName').errors?.['required']">First name is required.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" formControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="aboutYourself">About Yourself:</label>
+      <textarea id="aboutYourself" formControlName="aboutYourself" maxlength="100"></textarea>
+      
+
+      <div *ngIf="userForm.get('aboutYourself').invalid && userForm.get('aboutYourself').touched">
+        <!-- <p *ngIf="userForm.get('aboutYourself').errors?.maxlength">About yourself should not exceed 100 characters.</p> -->
+        <p *ngIf="userForm.get('aboutYourself').errors?.['maxlength']">About yourself should not exceed 100 characters.</p>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="areasOfInterest">Areas of Interest:</label>
+      <div *ngFor="let interest of areasOfInterest">
+        <input type="checkbox" id="interest{{interest.id}}" [value]="interest.id" formControlName="areasOfInterest">
+        <label for="interest{{interest.id}}">{{interest.name}}</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Are you a student or a professional?</label>
+      <div class="radio-group">
+        <div class="radio">
+          <input type="radio" id="studentRadio" formControlName="isStudent" value="true">
+          <label for="studentRadio">Student</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="professionalRadio" formControlName="isStudent" value="false">
+          <label for="professionalRadio">Professional</label>
+        </div>
+      </div>
+      <div *ngIf="userForm.get('isStudent').value === 'false'">
+        <div class="form-group">
+          <label for="experience">Experience:</label>
+          <div class="checkbox-group">
+            <div class="checkbox">
+              <input type="checkbox" id="zeroToFiveYears" formControlName="experience">
+              <label for="zeroToFiveYears">0-5 Years</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="fiveToTenYears" formControlName="experience">
+              <label for="fiveToTenYears">5-10 Years</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="tenPlusYears" formControlName="experience">
+              <label for="tenPlusYears">10 & above Years</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="expertise">Expertise:</label>
+          <div class="checkbox-group">
+            <div class="checkbox">
+              <input type="checkbox" id="backendExpertise" formControlName="expertise">
+              <label for="backendExpertise">Backend</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="frontendExpertise" formControlName="expertise">
+              <label for="frontendExpertise">Frontend</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <textarea id="role" formControlName="role" maxlength="200"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="!userForm.valid">Save</button>
+    </div>
+  </form>
+</div>

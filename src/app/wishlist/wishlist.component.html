@@ -1,0 +1,41 @@
+<div class="section-header">
+  <h1>My Wishlist</h1>
+</div>
+
+<div class="empty-div" *ngIf="wishlistCourses.length === 0; else cartNotEmpty">
+  <p class="empty-cart">The Wishlist is empty!</p>
+
+  <button class="btn btn-danger shop-now-btn" [routerLink]="'/Home'">Shop now</button>
+</div>
+
+<ng-template #cartNotEmpty>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let course of wishlistCourses">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img [src]="course.image" [height]="80" [width]="80">
+            <h5 class="card-title">{{ course.courseName }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              {{ course.actualPrice | currency:'INR' }}
+              <span *ngIf="course.discountPercentage > 0">
+                ({{ course.discountPercentage }}% off)
+              </span>
+            </h6>
+            <div class="d-flex align-items-center">
+              <button class="btn btn-danger mt-2" (click)="removeFromWishlist(course)">
+                Remove from Wishlist
+              </button>
+              <button class="btn btn-danger mt-2" (click)="moveToCart(course)">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ng-template>
+

@@ -1,0 +1,169 @@
+h2 {
+  margin-bottom: 15px;
+ }
+
+ h1 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+ }
+ 
+ table {
+  width: 100%;
+  margin-bottom: 20px;
+
+  border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ }
+
+ thead {
+  width: 100%;
+ }
+
+ .product-name {
+  width: 30%;
+  text-align: center;
+ }
+
+ td {
+  font-size: 14px;
+ }
+
+ .product-name-td {
+    word-wrap: break-word;
+    width: 25%;
+ }
+ 
+ .btn-td {
+  width: 20%;
+ }
+ 
+ .btn {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: 11px;
+ }
+
+ .price-card-p {
+  text-align: center;
+  font-size: 14px;
+ }
+
+ .price-card-btn {
+  font-size: 12px;
+ }
+
+ .course-row {
+  text-align: center;
+ }
+
+ .section-header{
+  margin-top: 35px;
+  text-align: center;
+}
+
+
+/* cart-page.component.css */
+
+.course-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.course-card h3 {
+  margin: 10px 0;
+}
+
+.course-card p {
+  margin: 5px 0;
+}
+
+.course-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.course-card button:hover {
+  background-color: #0056b3;
+}
+
+.price-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-card h2 {
+  margin-bottom: 10px;
+}
+
+.price-card p {
+  margin: 5px 0;
+}
+
+.price-card button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.price-card button:hover {
+  background-color: #218838;
+}
+
+.left-span {
+  margin: 20px;
+  border-right: 1px solid #000;
+  padding: 10px;
+}
+
+.empty-div {
+  text-align: center;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 20px;
+}
+
+.shop-now-btn {
+  margin-bottom: 20px;
+  margin-left: 0px !important;
+}

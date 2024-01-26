@@ -1,0 +1,76 @@
+
+<div class="section-header">
+  <h1>My Cart</h1>
+</div>
+
+<div class="empty-div" *ngIf="cart.length === 0; else cartNotEmpty">
+  <p class="empty-cart">The cart is empty!</p>
+
+  <button class="btn btn-danger shop-now-btn" [routerLink]="'/Home'">Shop now</button>
+</div>
+
+<ng-template #cartNotEmpty>
+
+  <div class="row">
+    <div class="col-md-9">
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="product-name">Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Discount</th>
+            <th>Final Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+      
+          
+      
+          <tr *ngFor="let course of cart" class="course-row">
+            <td class="product-name-td">{{ course.courseName }}</td>
+            <td>{{ course.actualPrice | currency:'INR' }}</td>
+            <td>{{ course.quantity }}</td>
+            <td>{{ course.actualPrice * course.quantity | currency:'INR' }}</td>
+            <td>{{ course.discountPercentage }}%</td>
+            <td>{{ ( course.actualPrice - ((course.discountPercentage/100) * course.actualPrice) ) * course.quantity | currency:'INR' }}</td>
+            <td class="btn-td">
+              <button class="btn btn-danger" (click)="removeCourse(course)">
+                Remove
+              </button>
+              <button class="btn btn-danger" (click)="moveToWishlist(course.id)">Move to Wishlist</button>
+            </td>
+          </tr>
+      
+        </tbody>
+      </table>
+  
+    </div>
+    <div class="col-md-3">
+      <!-- Price Card -->
+      <div class="price-card">
+        <h6>Total Cart Value</h6>
+        <p class="price-card-p">Total: {{ this.getPrice() | currency:'INR' }}</p>
+        <p class="price-card-p">Quantity: {{  this.getTotalQuantity() }}</p>
+        <!-- <p>Total: {{ this.getGrandTotal() | currency:'INR' }}</p> -->
+        <!-- <p>Discount: {{ this.getTotalDiscount() }}%</p> -->
+        <p class="price-card-p">You Saved: {{ this.YouSaved() | currency:'INR' }}</p>
+        <p class="price-card-p">Final Price: {{ this.getGrandTotal1() | currency:'INR' }}</p>
+  
+        <button class="price-card-btn" (click)="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <app-confirmation-modal confirmationModal
+  [showModal]="courseModals || false"
+  [modalMessage]="modalMessage"
+  (confirmAction)="confirmAction($event)"
+></app-confirmation-modal>
+
+</ng-template>
+
+
