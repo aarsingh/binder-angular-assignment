@@ -30,16 +30,64 @@ thead {
 
 .product-name {
   width: 30%;
+}
+
+.product-price {
+  width: 10%;
+}
+
+.product-qty{
+  width: 10%;
+}
+
+.product-total {
+  width: 10%;
+}
+
+.product-discount{
+  width: 10%;
+}
+
+.product-final-price {
+  width: 10%;
+}
+
+.product-action {
+  width: 20%;
+}
+
+th {
   text-align: center;
 }
 
 td {
   font-size: 14px;
+  text-align: center;
 }
 
 .product-name-td {
   word-wrap: break-word;
-  width: 25%;
+  width: 30%;
+}
+
+.product-price-td {
+  width: 10%;
+}
+
+.product-qty-td{
+  width: 10%;
+}
+
+.product-total-td {
+  width: 10%;
+}
+
+.product-discount-td{
+  width: 10%;
+}
+
+.product-final-price-td {
+  width: 10%;
 }
 
 .btn-td {
@@ -64,6 +112,7 @@ td {
 
 .course-row {
   text-align: center;
+  width: 100%;
 }
 
 .section-header {
@@ -166,4 +215,8 @@ td {
 .shop-now-btn {
   margin-bottom: 20px;
   margin-left: 0px !important;
+}
+
+.cart-t-body {
+  width: -webkit-fill-available;
 }

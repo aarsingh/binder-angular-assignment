@@ -17,23 +17,23 @@
         <thead>
           <tr>
             <th class="product-name">Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Discount</th>
-            <th>Final Price</th>
-            <th>Action</th>
+            <th class="product-price">Price</th>
+            <th class="product-qty">Quantity</th>
+            <th class="product-total">Total</th>
+            <th class="product-discount">Discount</th>
+            <th class="product-final-price">Final Price</th>
+            <th class="product-action">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="cart-t-body">
 
           <tr *ngFor="let course of cart" class="course-row">
             <td class="product-name-td">{{ course.courseName }}</td>
-            <td>{{ course.actualPrice | currency:'INR' }}</td>
-            <td>{{ course.quantity }}</td>
-            <td>{{ course.actualPrice * course.quantity | currency:'INR' }}</td>
-            <td>{{ course.discountPercentage }}%</td>
-            <td>{{ ( course.actualPrice - ((course.discountPercentage/100) * course.actualPrice) ) * course.quantity |
+            <td class="product-price-td">{{ course.actualPrice | currency:'INR' }}</td>
+            <td class="product-qty-td">{{ course.quantity }}</td>
+            <td class="product-total-td">{{ course.actualPrice * course.quantity | currency:'INR' }}</td>
+            <td class="product-discount-td">{{ course.discountPercentage }}%</td>
+            <td class="product-final-price-td">{{ ( course.actualPrice - ((course.discountPercentage/100) * course.actualPrice) ) * course.quantity |
               currency:'INR' }}</td>
             <td class="btn-td">
               <button class="btn btn-danger" (click)="removeCourse(course)">
